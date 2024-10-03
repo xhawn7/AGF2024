@@ -12,7 +12,7 @@
 
 <script>
 import Container from '@/components/UI/Container.vue'
-import Divider from '@/components/UI/divider.vue'
+import Divider from '@/components/UI/Divider.vue'
 export default {
   name: 'Notice2',
   components: {
