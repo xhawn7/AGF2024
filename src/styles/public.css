@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: normal;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*主色*/
+:root {
+  --primary-color: #ffffff;
+  --primary-background: #222222;
+  /* --primary-background: linear-gradient(180deg, #363435 0%, #1b1a1a 100%); */
+  --primary-font-color: #ffffff;
+  --primary-active-color: #2091fa;
+}
+body {
+  color: var(--primary-color);
+  background: var(--primary-background);
+  font-family: 'Zen Kaku Gothic New', sans-serif !important;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select,
+header,
+footer,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+span {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cursor-p {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+/* 大写开头 */
+.text-capitalize {
+  text-transform: capitalize;
+}
+/* 全大写 */
+.text-uppercase {
+  text-transform: uppercase;
+}
+/* 全小写 */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* 相对定位*/
+.position-absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: calc(100% - 3.75rem);
+    min-width: calc(100% - 3.75rem);
+  }
+}
