@@ -26,7 +26,7 @@
       </div>
       <div class="content">
         <div v-for="(i, index) in topList" :key="index" class="content_item">
-          <span class="content_title">{{ i.title }}</span>
+          <span class="content_title" v-html="i.title"></span>
           <span class="content_intro">{{ i.intro }}</span>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default defineComponent({
           intro: '女性向け恋愛ミステリーゲーム'
         },
         {
-          title: '価格',
+          title: '価&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格',
           intro: '無料（一部ゲーム内課金あり）'
         },
         {
@@ -183,10 +183,11 @@ export default defineComponent({
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  padding: 5px 10px;
   border-radius: 5px;
   background-color: #2d3748;
   width: 8.75rem;
+  text-align: center;
+  line-height: 3.5rem;
 }
 
 .content_intro {
