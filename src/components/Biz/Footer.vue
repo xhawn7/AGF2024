@@ -37,7 +37,12 @@
         <img src="@/assets/logo.png" />
       </div>
       <ul>
-        <li v-for="(i, index) in bottomList" :key="index" class="label_item">
+        <li
+          @click="cutOpen(i)"
+          v-for="(i, index) in bottomList"
+          :key="index"
+          class="label_item"
+        >
           {{ i.label }}
         </li>
       </ul>
@@ -177,10 +182,11 @@ export default defineComponent({
 .content_title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #10b981;
+  color: white;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #2d3748;
+  width: 8.75rem;
 }
 
 .content_intro {
@@ -188,7 +194,8 @@ export default defineComponent({
   color: #f9fafb;
   margin-left: 20px;
   flex-grow: 1;
-  text-align: right;
+  text-align: left;
+  line-height: 3rem;
 }
 
 .footer_bottom {
