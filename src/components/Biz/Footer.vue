@@ -184,7 +184,8 @@ export default defineComponent({
 }
 
 .btn img:hover {
-  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  transform: scale(0.98);
 }
 
 /* 原有的 title_section 样式 */

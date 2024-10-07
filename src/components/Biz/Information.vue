@@ -1,6 +1,11 @@
 <template>
   <Container titleText="物販情報">
-    <swiper :slides-per-view="2.5" space-between="20" pagination>
+    <swiper
+      :slides-per-view="slidesPerView"
+      space-between="20"
+      pagination
+      :breakpoints="breakpoints"
+    >
       <swiper-slide
         v-for="(i, index) in list"
         :key="index"
@@ -233,7 +238,21 @@ export default defineComponent({
             '※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
           ]
         }
-      ]
+      ],
+      breakpoints: {
+        320: {
+          slidesPerView: 2.5 // 手机端
+        },
+        768: {
+          slidesPerView: 2.5 // iPad端
+        },
+        1314: {
+          slidesPerView: 3.5 // iPad端
+        },
+        2560: {
+          slidesPerView: 4.5 // 大屏（2k以上）
+        }
+      }
     }
   },
   setup() {
@@ -260,52 +279,82 @@ export default defineComponent({
 </script>
 <style scoped>
 li {
-  flex: 0 0 40%;
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  transition: transform 0.3s ease;
-  display: inline-block;
-  white-space: normal;
-  height: 40rem;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 20rem; /* 为所有屏幕设置一个基础高度 */
 }
 
 li:hover {
-  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  transform: scale(0.98);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+}
+
+.image {
+  width: auto;
+  height: 12rem; /* 固定图片容器高度 */
+  overflow: hidden; /* 限制图片在容器内，超出部分隐藏 */
 }
 
 .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 0.5rem;
-  object-fit: contain; /* 确保图片完整显示，保持比例 */
+  object-fit: cover; /* 确保图片完整显示并填满容器 */
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 将字体大小更改为1.2rem */
   font-weight: bold;
   margin-top: 1rem;
-  color: #363435;
+  color: #333;
+  text-align: center;
+  line-height: 1.5rem; /* 设置行高 */
 }
 
 .price {
   font-size: 1.2rem;
   color: #555;
   margin-top: 0.5rem;
+  text-align: center;
 }
 
-/* iPad端样式 */
-@media screen and (max-width: 1024px) {
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
   li {
-    height: 32rem;
+    height: 22rem; /* 移动端高度 */
+  }
+
+  .image {
+    height: 10rem; /* 移动端图片容器高度 */
   }
 }
 
-/* 手机端样式 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   li {
-    height: 26rem;
+    height: 20rem; /* iPad端高度 */
+  }
+
+  .image {
+    height: 11rem; /* iPad端图片容器高度 */
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  li {
+    height: 22rem; /* 大屏幕高度 */
+  }
+
+  .image {
+    height: 14rem; /* 大屏幕图片容器高度 */
   }
 }
 </style>

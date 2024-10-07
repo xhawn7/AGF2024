@@ -46,12 +46,35 @@ export default {
 </script>
 
 <style scoped>
+/* 通用样式 */
 .info-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 1rem;
 }
 
+/* 移动端：一行显示1列 */
+@media screen and (max-width: 767px) {
+  .info-list {
+    grid-template-columns: 1fr; /* 1列布局 */
+  }
+}
+
+/* iPad端：一行显示2列 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .info-list {
+    grid-template-columns: repeat(2, 1fr); /* 2列布局 */
+  }
+}
+
+/* PC端：一行显示4列 */
+@media screen and (min-width: 1025px) {
+  .info-list {
+    grid-template-columns: repeat(4, 1fr); /* 4列布局 */
+  }
+}
 .info-item {
   background-color: #f9f9f9;
   border-radius: 0.5rem;
@@ -60,11 +83,13 @@ export default {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 .info-item:hover {
-  transform: translateY(-0.2rem);
+  transition: transform 0.3s ease;
+  transform: scale(0.98);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
 }
 
 .name {
