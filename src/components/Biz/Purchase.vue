@@ -90,6 +90,11 @@ export default {
     gap: 2rem; /* 图片和内容之间的间距 */
   }
 
+  /* 针对第二个li交换content和image的位置 */
+  li:nth-child(2) .item-container {
+    flex-direction: row-reverse; /* 交换图片和内容的位置 */
+  }
+
   .image {
     flex: 1;
     max-width: 40%; /* 图片宽度 */
