@@ -286,7 +286,7 @@ li {
   transition: box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   box-sizing: border-box;
   height: 20rem; /* 为所有屏幕设置一个基础高度 */
