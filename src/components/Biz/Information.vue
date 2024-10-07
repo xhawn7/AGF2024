@@ -241,7 +241,7 @@ export default defineComponent({
       ],
       breakpoints: {
         320: {
-          slidesPerView: 2.5 // 手机端
+          slidesPerView: 1.8 // 手机端
         },
         768: {
           slidesPerView: 2.5 // iPad端
@@ -312,12 +312,12 @@ li:hover {
 }
 
 .name {
-  font-size: 1.5rem; /* 将字体大小更改为1.2rem */
+  font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
   color: #333;
   text-align: center;
-  line-height: 1.5rem; /* 设置行高 */
+  line-height: 1.5rem;
 }
 
 .price {
@@ -330,31 +330,32 @@ li:hover {
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
   li {
-    height: 22rem; /* 移动端高度 */
+    height: 32rem; /* 移动端高度增加10rem */
   }
 
   .image {
-    height: 10rem; /* 移动端图片容器高度 */
+    height: 20rem; /* 移动端图片容器高度增加10rem */
   }
 }
 
 @media screen and (max-width: 1024px) {
   li {
-    height: 20rem; /* iPad端高度 */
+    height: 30rem; /* iPad端高度增加10rem */
   }
 
   .image {
-    height: 11rem; /* iPad端图片容器高度 */
+    height: 18rem; /* iPad端图片容器高度增加10rem */
+    width: auto;
   }
 }
 
 @media screen and (min-width: 2560px) {
   li {
-    height: 22rem; /* 大屏幕高度 */
+    height: 32rem; /* 大屏幕高度 */
   }
 
   .image {
-    height: 14rem; /* 大屏幕图片容器高度 */
+    height: 24rem; /* 大屏幕图片容器高度 */
   }
 }
 </style>
