@@ -303,7 +303,7 @@ li:hover {
 }
 
 /* PC端，每行显示2个li */
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .row {
     display: flex;
     flex-wrap: wrap;
