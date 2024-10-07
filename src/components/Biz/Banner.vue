@@ -12,18 +12,18 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 // pc
 .Banner {
   width: 100%;
-  height: 1043px;
+  height: 100vh; /* PC端使用视口高度，动态调整 */
   .banner_img {
     width: 100%;
     height: 100%;
     background-image: url('@/assets/banner_p.jpg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover; /* 填满容器，不留空白 */
   }
 }
 // ipad

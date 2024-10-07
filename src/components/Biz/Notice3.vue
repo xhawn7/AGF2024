@@ -1,27 +1,20 @@
 <template>
-  <Container contentBackground="white" titleText="注意事項Ⅲ" type="notice">
-    <div class="container">
-      <ul>
-        <li v-for="(i, index) in list" :key="index" v-html="i"></li>
-      </ul>
-      <div class="footer">TEARS OF THEMIS</div>
-    </div>
-  </Container>
-  <Divider />
+  <div>
+    <Notice :list="listData" titleText="注意事項ⅠⅠⅠ" />
+  </div>
 </template>
 
 <script>
-import Container from '@/components/UI/Container.vue'
-import Divider from '@/components/UI/Divider.vue'
+import Notice from '@/components/UI/Notice.vue'
+
 export default {
-  name: 'Notice3',
+  name: 'Notice2',
   components: {
-    Container,
-    Divider
+    Notice
   },
   data() {
     return {
-      list: [
+      listData: [
         "<div>入場にはチケットの購入が必要です、詳しいは、<a href='https://agf-ikebukuro.jp/s/agf2023/page/ticket?ima=4735&tag=200' target='_blank' rel='noopener'>こちら</a>をご確認ください。</div>",
         'すべての出展内容に関して、予告無く変更や中止となる場合がございます。',
         '特典は数に限りがございますので、なくなり次第終了となります。',
@@ -38,20 +31,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-li {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 1rem;
-  line-height: 1.8;
-  text-align: left;
-}
-.footer {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #555;
-  margin-top: 2rem;
-  font-weight: bold;
-}
-</style>

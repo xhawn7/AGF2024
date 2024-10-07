@@ -286,6 +286,7 @@ li:hover {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
+  object-fit: contain; /* 确保图片完整显示，保持比例 */
 }
 
 .name {
@@ -299,5 +300,34 @@ li:hover {
   font-size: 1.2rem;
   color: #555;
   margin-top: 0.5rem;
+}
+
+/* PC端，每行显示2个li */
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px; /* 设置li之间的间距 */
+    overflow-x: visible;
+  }
+
+  li {
+    flex: 0 0 calc(50% - 20px); /* 每行显示2个li，减去40px的间距一半 */
+  }
+
+  /* 如果li是最后一个且数量为奇数，则占满整行 */
+  .row li:nth-child(odd):last-child {
+    flex: 0 0 100%;
+  }
+
+  .image {
+    height: 200px; /* 设置固定高度，调整合适的值 */
+  }
+
+  .image img {
+    height: 100%; /* 让图片高度适应容器高度 */
+    object-fit: contain; /* 确保图片按比例缩放并完整显示 */
+  }
 }
 </style>

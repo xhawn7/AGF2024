@@ -36,6 +36,7 @@ export default {
   },
   computed: {
     defaultStyle() {
+      // const maxWidth = window.innerWidth < 768 ? '90%' : '80%' // 小于768px为移动端
       return {
         background: 'linear-gradient(180deg, #e7e6e6 0%, #d5d4d4 100%)',
         padding: '2rem',
