@@ -1,14 +1,20 @@
 <template>
   <Container titleText="物販情報">
-    <ul class="row">
-      <li v-for="(i, index) in list" :key="index" @click="CommodityDetails(i)">
-        <div class="image">
-          <img :src="i.image" />
-        </div>
-        <div class="name">{{ i.name }}</div>
-        <div class="price">{{ i.price }}</div>
-      </li>
-    </ul>
+    <swiper :slides-per-view="2.5" space-between="20" pagination>
+      <swiper-slide
+        v-for="(i, index) in list"
+        :key="index"
+        @click="CommodityDetails(i)"
+      >
+        <li>
+          <div class="image">
+            <img :src="i.image" />
+          </div>
+          <div class="name">{{ i.name }}</div>
+          <div class="price">{{ i.price }}</div>
+        </li>
+      </swiper-slide>
+    </swiper>
     <information-dialog
       v-if="visibleOpen"
       :open="visibleOpen"
@@ -20,6 +26,8 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/swiper-bundle.css'
 import image1 from '@/assets/commodity/item1.jpg'
 import image11 from '@/assets/commodity/item1-1.jpg'
 import image12 from '@/assets/commodity/item1-2.jpg'
@@ -40,7 +48,7 @@ import Container from '@/components/UI/Container.vue'
 
 export default defineComponent({
   name: 'Information',
-  components: { InformationDialog, Container },
+  components: { InformationDialog, Container, Swiper, SwiperSlide },
   data() {
     return {
       list: [
@@ -250,23 +258,7 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="less" scoped>
-.row {
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-}
-
-.row::-webkit-scrollbar {
-  display: none;
-}
-
+<style scoped>
 li {
   flex: 0 0 40%;
   background: #fff;
@@ -276,6 +268,7 @@ li {
   transition: transform 0.3s ease;
   display: inline-block;
   white-space: normal;
+  height: 40rem;
 }
 
 li:hover {
@@ -302,32 +295,17 @@ li:hover {
   margin-top: 0.5rem;
 }
 
-/* PC端，每行显示2个li */
-@media (min-width: 1100px) {
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px; /* 设置li之间的间距 */
-    overflow-x: visible;
-  }
-
+/* iPad端样式 */
+@media screen and (max-width: 1024px) {
   li {
-    flex: 0 0 calc(50% - 20px); /* 每行显示2个li，减去40px的间距一半 */
+    height: 32rem;
   }
+}
 
-  /* 如果li是最后一个且数量为奇数，则占满整行 */
-  .row li:nth-child(odd):last-child {
-    flex: 0 0 100%;
-  }
-
-  .image {
-    height: 200px; /* 设置固定高度，调整合适的值 */
-  }
-
-  .image img {
-    height: 100%; /* 让图片高度适应容器高度 */
-    object-fit: contain; /* 确保图片按比例缩放并完整显示 */
+/* 手机端样式 */
+@media screen and (max-width: 768px) {
+  li {
+    height: 26rem;
   }
 }
 </style>

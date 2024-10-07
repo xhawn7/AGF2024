@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Notice :list="listData" titleText="注意事項ⅠⅠ" />
+    <Notice :list="listData" titleText="注意事項II" />
   </div>
 </template>
 

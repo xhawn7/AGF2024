@@ -1113,6 +1113,11 @@ supports-color@^3.2.3:
   dependencies:
     has-flag "^1.0.0"
 
+swiper@^11.1.14:
+  version "11.1.14"
+  resolved "https://registry.npmmirror.com/swiper/-/swiper-11.1.14.tgz#7901b4955c46dd0ad76fac1e9de2a69f04f34abb"
+  integrity sha512-VbQLQXC04io6AoAjIUWuZwW4MSYozkcP9KjLdrsG/00Q/yiwvhz9RQyt0nHXV10hi9NVnDNy1/wv7Dzq1lkOCQ==
+
 throttle-debounce@^5.0.0:
   version "5.0.2"
   resolved "https://registry.npmmirror.com/throttle-debounce/-/throttle-debounce-5.0.2.tgz#ec5549d84e053f043c9fd0f2a6dd892ff84456b1"

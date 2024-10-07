@@ -197,7 +197,7 @@ export default defineComponent({
 }
 
 .title_content {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: #f3f4f6;
   display: flex;
   flex-direction: column;

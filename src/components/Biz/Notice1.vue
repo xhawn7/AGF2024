@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       listData: [
-        "<div>入場にはチケットの購入が必要です。詳しいは、<a href='https://agf-ikebukuro.jp/s/agf2023/page/ticket?ima=4735&amp;tag=200' target='_blank' rel='noopener'>こちら</a>をご確認ください。</div>",
+        "<div>入場にはチケットの購入が必要です。詳しいは、<a href='https://agf-ikebukuro.jp/s/agf2024/page/ticket?ima=1051&tag=200' target='_blank' rel='noopener'>こちら</a>をご確認ください。</div>",
         '掲載している画像はイメージです。実際の商品とは多少異なる場合がごさいます。',
         '商品はスケジコール分ご用意しておりますが各日の在庫がなくなり次第、その日の販壳を終了させていただきます。万がー品切れとなった際はご容赦ください。',
         'また、通贩にて後日再販される予定もごさいます。準備ができ次第ご案内いたします',

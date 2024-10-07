@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Notice :list="listData" titleText="注意事項ⅠⅠⅠ" />
+    <Notice :list="listData" titleText="注意事項III" />
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       listData: [
-        "<div>入場にはチケットの購入が必要です、詳しいは、<a href='https://agf-ikebukuro.jp/s/agf2023/page/ticket?ima=4735&tag=200' target='_blank' rel='noopener'>こちら</a>をご確認ください。</div>",
+        "<div>入場にはチケットの購入が必要です、詳しいは、<a href='https://agf-ikebukuro.jp/s/agf2024/page/ticket?ima=1051&tag=200' target='_blank' rel='noopener'>こちら</a>をご確認ください。</div>",
         'すべての出展内容に関して、予告無く変更や中止となる場合がございます。',
         '特典は数に限りがございますので、なくなり次第終了となります。',
         'ご購入や、各種会場企画、特典配布の列形成の際は、会場係員の誘導に従ってお並びください。',

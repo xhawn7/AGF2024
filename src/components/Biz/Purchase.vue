@@ -161,15 +161,7 @@ export default {
 
 .custom-line {
   height: 3px;
-  background-color: #dddcdc;
-  background-image: repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5) 10px,
-      transparent 10px,
-      transparent 20px
-    ),
-    linear-gradient(to bottom, #000 0%, #000 100%);
+  background-color: #222;
   margin: 2rem 0;
 }
 </style>
