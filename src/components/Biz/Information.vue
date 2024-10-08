@@ -241,7 +241,7 @@ export default defineComponent({
       ],
       breakpoints: {
         320: {
-          slidesPerView: 1.8 // 手机端
+          slidesPerView: 1.5 // 手机端
         },
         768: {
           slidesPerView: 2.5 // iPad端
@@ -250,7 +250,7 @@ export default defineComponent({
           slidesPerView: 3.5 // iPad端
         },
         2560: {
-          slidesPerView: 4.5 // 大屏（2k以上）
+          slidesPerView: 3.5 // 大屏（2k以上）
         }
       }
     }
@@ -289,7 +289,7 @@ li {
   justify-content: space-evenly;
   align-items: center;
   box-sizing: border-box;
-  height: 20rem; /* 为所有屏幕设置一个基础高度 */
+  height: 30rem; /* 为所有屏幕设置一个基础高度 */
 }
 
 li:hover {
@@ -300,7 +300,7 @@ li:hover {
 
 .image {
   width: auto;
-  height: 12rem; /* 固定图片容器高度 */
+  height: 18rem; /* 固定图片容器高度 */
   overflow: hidden; /* 限制图片在容器内，超出部分隐藏 */
 }
 
@@ -328,34 +328,35 @@ li:hover {
 }
 
 /* 响应式设计 */
-@media screen and (max-width: 768px) {
-  li {
-    height: 32rem; /* 移动端高度增加10rem */
-  }
-
-  .image {
-    height: 20rem; /* 移动端图片容器高度增加10rem */
-  }
-}
 
 @media screen and (max-width: 1024px) {
   li {
-    height: 30rem; /* iPad端高度增加10rem */
+    height: 35rem; /* iPad端高度增加10rem */
   }
 
   .image {
-    height: 18rem; /* iPad端图片容器高度增加10rem */
+    height: 22rem; /* iPad端图片容器高度增加10rem */
     width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  li {
+    height: 34rem; /* 移动端高度增加10rem */
+  }
+
+  .image {
+    height: 22rem; /* 移动端图片容器高度增加10rem */
   }
 }
 
 @media screen and (min-width: 2560px) {
   li {
-    height: 32rem; /* 大屏幕高度 */
+    height: 52rem; /* 大屏幕高度 */
   }
 
   .image {
-    height: 24rem; /* 大屏幕图片容器高度 */
+    height: 36rem; /* 大屏幕图片容器高度 */
   }
 }
 </style>
