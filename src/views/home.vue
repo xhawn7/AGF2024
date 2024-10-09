@@ -1,14 +1,35 @@
 <template>
-  <Banner />
-  <Overview />
-  <Information />
-  <Purchase />
-  <Notice1 />
-  <Project />
-  <Notice2 />
-  <Venue />
-  <Notice3 />
-  <Footer />
+  <div id="home">
+    <AnchorMenu />
+
+    <Banner />
+
+    <div id="overview">
+      <Overview />
+    </div>
+    <div id="information">
+      <Information />
+    </div>
+    <div id="purchase">
+      <Purchase />
+    </div>
+
+    <Notice1 />
+
+    <div id="project">
+      <Project />
+    </div>
+
+    <Notice2 />
+
+    <div id="venue">
+      <Venue />
+    </div>
+
+    <Notice3 />
+
+    <Footer />
+  </div>
 </template>
 
 <script lang="ts">
@@ -23,7 +44,7 @@ import Notice3 from '@/components/Biz/Notice3.vue'
 import Information from '@/components/Biz/Information.vue'
 import Footer from '@/components/Biz/Footer.vue'
 import Overview from '@/components/Biz/Overview.vue'
-
+import AnchorMenu from '@/components/Biz/AnchorMenu.vue'
 export default defineComponent({
   name: 'home',
   components: {
@@ -36,7 +57,8 @@ export default defineComponent({
     Notice3,
     Information,
     Footer,
-    Overview
+    Overview,
+    AnchorMenu
   }
 })
 </script>
