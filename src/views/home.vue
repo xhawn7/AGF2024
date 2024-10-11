@@ -1,33 +1,15 @@
 <template>
   <div id="home">
     <AnchorMenu />
-
     <Banner />
-
-    <div id="overview">
-      <Overview />
-    </div>
-    <div id="information">
-      <Information />
-    </div>
-    <div id="purchase">
-      <Purchase />
-    </div>
-
+    <Overview />
+    <Information />
+    <Purchase />
     <Notice1 />
-
-    <div id="project">
-      <Project />
-    </div>
-
+    <Project />
     <Notice2 />
-
-    <div id="venue">
-      <Venue />
-    </div>
-
+    <Venue />
     <Notice3 />
-
     <Footer />
   </div>
 </template>

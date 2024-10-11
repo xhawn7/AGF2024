@@ -1,5 +1,5 @@
 <template>
-  <Container contentBackground="striped" titleText="開催概要">
+  <Container contentBackground="striped" titleText="開催概要" id="overview">
     <ul class="info-list">
       <li v-for="i in list" :key="i.title" class="info-item">
         <div class="name">{{ i.title }}</div>
@@ -7,6 +7,7 @@
       </li>
     </ul>
   </Container>
+
   <Divider />
 </template>
 
@@ -46,50 +47,37 @@ export default {
 </script>
 
 <style scoped>
-/* 通用样式 */
+/* 优化样式 */
 .info-list {
   list-style: none;
-  padding: 0;
+  padding: 1.5rem; /* 使整个 ul 有统一的内边距 */
   margin: 0;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
+  background-color: #f9f9f9; /* 给 ul 添加白色背景色 */
+  border-radius: 0.5rem; /* 添加圆角 */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* 给 ul 添加阴影效果 */
 }
 
 .info-item {
-  background-color: #f9f9f9;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 1.5rem;
+  margin-bottom: 0.5rem; /* 每个 li 元素间隔 */
+  padding: 0.5rem 0; /* 每个 li 元素的上下内边距 */
+  border-bottom: 1px solid #eee; /* 为每个 li 添加底部边框 */
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.info-item:hover {
-  transition: transform 0.3s ease;
-  /* transform: scale(0.99); */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+.info-item:last-child {
+  border-bottom: none; /* 去除最后一个 li 的底部边框 */
 }
 
 .name {
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 0.5rem;
 }
 
 .intro {
   font-size: 1.2rem;
   color: #666;
   line-height: 1.6;
-}
-
-.info-item::before {
-  content: '✤';
-  font-size: 1.5rem;
-  color: #ff6f61;
-  margin-right: 0.5rem;
-  vertical-align: middle;
 }
 </style>

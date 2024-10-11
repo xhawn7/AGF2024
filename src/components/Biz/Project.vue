@@ -1,5 +1,9 @@
 <template>
-  <Container contentBackground="white" titleText="会場スへシャル企画">
+  <Container
+    contentBackground="white"
+    titleText="会場スへシャル企画"
+    id="project"
+  >
     <div class="title">ミニゲーム『綺夢の夜』実施決定！</div>
     <div class="image_top">
       <img src="@/assets/special/top.jpg" />
@@ -8,9 +12,6 @@
       シャフルされたカードの中から全員探し出すと、特典「ステッカー」ランダムで1枚プレゼントします。
       <p>*当イベントの参加には整理券が必要となります。</p>
       <p>*下記の時間帯にブースにて整理券を配布いたします。</p>
-    </div>
-    <div class="image_btm">
-      <img src="@/assets/special/bottom.jpg" />
     </div>
   </Container>
 </template>

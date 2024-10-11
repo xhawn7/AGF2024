@@ -1,10 +1,12 @@
 <template>
-  <Container titleText="物販情報">
+  <Container titleText="物販情報" id="information">
     <swiper
       :slides-per-view="slidesPerView"
       space-between="20"
       pagination
       :breakpoints="breakpoints"
+      :modules="modules"
+      navigation
     >
       <swiper-slide
         v-for="(i, index) in list"
@@ -31,8 +33,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/swiper-bundle.css'
+
 import image1 from '@/assets/commodity/item1.jpg'
 import image11 from '@/assets/commodity/item1-1.jpg'
 import image12 from '@/assets/commodity/item1-2.jpg'
@@ -282,12 +285,35 @@ export default defineComponent({
       visibleOpen,
       currList,
       CommodityDetails,
-      request
+      request,
+      modules: [Navigation, Pagination, Scrollbar, A11y]
     }
   }
 })
 </script>
 <style scoped>
+/* 使用 ::v-deep 选择器定制 Swiper 的 navigation 样式 */
+:deep(.swiper-button-next),
+:deep(.swiper-button-prev) {
+  color: #fff;
+  background-color: #222;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:deep(.swiper-button-next::after),
+:deep(.swiper-button-prev::after) {
+  font-size: 20px;
+}
+
+:deep(.swiper-button-next:hover),
+:deep(.swiper-button-prev:hover) {
+  background-color: #222;
+}
 li {
   background: #fff;
   border-radius: 0.5rem;

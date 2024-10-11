@@ -1,5 +1,5 @@
 <template>
-  <Container titleText="購入特典" contentBackground="white">
+  <Container titleText="購入特典" contentBackground="white" id="purchase">
     <ul>
       <li v-for="(i, index) in list" :key="index">
         <div class="item-container">

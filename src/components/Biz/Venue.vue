@@ -1,9 +1,12 @@
 <template>
-  <Container contentBackground="white" titleText="会場特典">
+  <Container contentBackground="white" titleText="会場特典" id="venue">
     <div class="title">AGF2024来場記念ポストカード</div>
     <div class="content">
       未定事件簿ブースお越しいただくポストカード1枚プレゼント。
       <p>*数に限りございますので、なくなり次第終了となります。</p>
+      <div class="image_btm">
+        <img src="@/assets/special/bottom.jpg" />
+      </div>
     </div>
   </Container>
 </template>
@@ -46,6 +49,6 @@ export default {
   font-style: italic;
   font-size: 1.2rem;
   color: #6b7280;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 </style>
