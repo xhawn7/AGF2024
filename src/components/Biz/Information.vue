@@ -11,7 +11,7 @@
       <swiper-slide
         v-for="(i, index) in list"
         :key="index"
-        @click="CommodityDetails(i)"
+        @click="CommodityDetails(i, index)"
       >
         <li>
           <div class="image">
@@ -60,6 +60,28 @@ export default defineComponent({
   data() {
     return {
       list: [
+        {
+          image: image3,
+          name: 'グリッターアクリルキーホルダー 4種',
+          price: '各1,320円(税込)',
+          matter: ['【素材】<br>アクリル樹脂、オイル ※グリッター仕様'],
+          size: ['【サイズ】<br>約55*113mm'],
+          type: ['【種類】<br>全4種'],
+          hint: [
+            '※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
+          ]
+        },
+        {
+          image: image5,
+          name: 'キャラ撮りスティック',
+          price: '各1,320円(税込)',
+          matter: ['【素材】<br>アクリル'],
+          size: ['【サイズ】<br>135*83mm'],
+          type: ['【種類】<br>全4種'],
+          hint: [
+            '※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
+          ]
+        },
         {
           image: image1,
           name: '【ランダム】トレーディング缶バッジ 第二弾 各全5種',
@@ -195,34 +217,13 @@ export default defineComponent({
             }
           ]
         },
-        {
-          image: image3,
-          name: 'グリッターアクリルキーホルダー 4種',
-          price: '各1,320円(税込)',
-          matter: ['【素材】<br>アクリル樹脂、オイル ※グリッター仕様'],
-          size: ['【サイズ】<br>約55*113mm'],
-          type: ['【種類】<br>全4種'],
-          hint: [
-            '※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
-          ]
-        },
+
         {
           image: image4,
           name: 'ホログラム色紙',
           price: '各1,100円(税込)',
           matter: ['【素材】<br>PET、紙'],
           size: ['【サイズ】<br>120*205mm'],
-          type: ['【種類】<br>全4種'],
-          hint: [
-            '※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
-          ]
-        },
-        {
-          image: image5,
-          name: 'キャラ撮りスティック',
-          price: '各1,320円(税込)',
-          matter: ['【素材】<br>アクリル'],
-          size: ['【サイズ】<br>135*83mm'],
           type: ['【種類】<br>全4種'],
           hint: [
             '※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
@@ -272,8 +273,8 @@ export default defineComponent({
     const visibleOpen: any = ref(false)
     const currList: any = ref([])
 
-    const CommodityDetails = (i: any) => {
-      visibleOpen.value = true
+    const CommodityDetails = (i: any, index: number) => {
+      visibleOpen.value = index in [0, 1] ? true : false
       currList.value = i.children ? i.children : [i]
     }
 
