@@ -36,7 +36,7 @@ export default defineComponent({
 /* mobile */
 @media screen and (max-width: 750px) {
   .Banner {
-    height: 61rem;
+    height: 84rem;
     .banner_img {
       background-image: url('@/assets/banner_m.jpg'); /* 切换为移动端图片 */
       background-size: contain; /* 使用contain，图片等比缩放 */
