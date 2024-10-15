@@ -4,7 +4,7 @@
     titleText="会場スへシャル企画"
     id="project"
   >
-    <div class="title">ミニゲーム『綺夢の夜』実施決定！</div>
+    <div class="title">ミニゲーム『DAZZLING NIGHT』実施決定！</div>
     <div class="image_top">
       <img src="@/assets/special/top.jpg" />
     </div>
