@@ -4,7 +4,11 @@
       <li v-for="(i, index) in list" :key="index">
         <div class="item-container">
           <div class="image">
-            <img :src="i.image" />
+            <img
+              :src="i.image"
+              @click="openModal(i.image, index)"
+              class="thumbnail"
+            />
           </div>
           <div class="content">
             <div class="btn" v-if="i?.btn" @click="DiscountsDetails(i, index)">
@@ -21,6 +25,15 @@
         <div v-if="index === 0" class="custom-line"></div>
       </li>
     </ul>
+    <a-modal
+      v-model:visible="isModalVisible"
+      width="80%"
+      :footer="null"
+      centered
+      :closable="false"
+    >
+      <img :src="currentImage" class="modal-image" />
+    </a-modal>
   </Container>
 </template>
 
@@ -61,13 +74,41 @@ export default {
             '※掲載画像はイメージです。実際の商品と多少異なる場合があります。'
           ]
         }
-      ]
+      ],
+      isModalVisible: false, // 控制模态框显示
+      currentImage: '' // 当前点击的图片路径
+    }
+  },
+  methods: {
+    openModal(image, index) {
+      if (index == 0) {
+        this.currentImage = image
+        this.isModalVisible = true
+      }
+    },
+    closeModal() {
+      this.isModalVisible = false
     }
   }
 }
 </script>
 
 <style scoped>
+.thumbnail {
+  width: 100px; /* 缩略图大小可以根据需要调整 */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 0.7; /* 鼠标悬停时透明度变化 */
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+}
+
 /* 默认情况下，移动端样式保持不变 */
 .item-container {
   display: block;
