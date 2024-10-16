@@ -8,11 +8,6 @@
     <div class="image_top">
       <img src="@/assets/special/top.jpg" />
     </div>
-    <!-- <div class="content">
-      シャフルされたカードの中から全員探し出すと、特典「ステッカー」ランダムで1枚プレゼントします。
-      <p>*当イベントの参加には整理券が必要となります。</p>
-      <p>*下記の時間帯にブースにて整理券を配布いたします。</p>
-    </div> -->
   </Container>
 </template>
 

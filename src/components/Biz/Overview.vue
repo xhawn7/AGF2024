@@ -40,7 +40,7 @@ export default {
           intro:
             window.innerWidth <= 768
               ? `池袋・サンシャインシティ<br/>White AREA：文化会館3階<br/>展示ホールC Wー15`
-              : `池袋・サンシャインシティ White AREA：文化会館3階 展示ホールC Wー15`
+              : `池袋・サンシャインシティブースWhite AREA：文化会館3階　展示ホールC W-15`
         }
       ]
     }
@@ -49,37 +49,35 @@ export default {
 </script>
 
 <style scoped>
-/* PC 端隐藏 <br/> 标签 */
 .intro br {
   display: none !important;
 }
 
-/* 移动端显示 <br/> 标签 */
 @media screen and (max-width: 768px) {
   .intro br {
     display: inline !important;
   }
 }
-/* 优化样式 */
+
 .info-list {
   list-style: none;
-  padding: 1.5rem; /* 使整个 ul 有统一的内边距 */
+  padding: 1.5rem;
   margin: 0;
-  background-color: #f9f9f9; /* 给 ul 添加白色背景色 */
-  border-radius: 0.5rem; /* 添加圆角 */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* 给 ul 添加阴影效果 */
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .info-item {
-  margin-bottom: 0.5rem; /* 每个 li 元素间隔 */
-  padding: 0.5rem 0; /* 每个 li 元素的上下内边距 */
-  border-bottom: 1px solid #eee; /* 为每个 li 添加底部边框 */
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
   display: flex;
   flex-direction: column;
 }
 
 .info-item:last-child {
-  border-bottom: none; /* 去除最后一个 li 的底部边框 */
+  border-bottom: none;
 }
 
 .name {

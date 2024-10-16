@@ -41,7 +41,7 @@ import image11 from '@/assets/commodity/item1-1.jpg'
 import image12 from '@/assets/commodity/item1-2.jpg'
 import image13 from '@/assets/commodity/item1-3.jpg'
 import image14 from '@/assets/commodity/item1-4.jpg'
-import image2 from '@/assets/commodity/item1.jpg'
+import image2 from '@/assets/commodity/item2.jpg'
 import image21 from '@/assets/commodity/item1-1.jpg'
 import image22 from '@/assets/commodity/item1-2.jpg'
 import image23 from '@/assets/commodity/item1-3.jpg'
@@ -84,7 +84,6 @@ export default defineComponent({
         },
         {
           image: image1
-
           // name: '【ランダム】トレーディング缶バッジ 第二弾 各全5種',
           // price: '1個 550円(税込)',
           // matter: [

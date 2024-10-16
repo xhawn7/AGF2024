@@ -109,77 +109,71 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* 默认移动端样式 */
 .footer_top {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid #374151;
   padding-bottom: 30px;
-  margin: 2rem auto; /* 增加margin */
-  width: 90%; /* 移动端宽度为90% */
+  margin: 2rem auto;
+  width: 90%;
   gap: 20px;
 }
 
-/* 左侧包含 title_section 和 btn_section */
 .left_column {
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
   align-items: center;
 }
 
 .content {
   width: 100%;
 }
-/* PC 和 iPad 布局 */
 @media screen and (min-width: 768px) {
   .footer_top {
     display: grid;
-    grid-template-columns: 1.3fr 1fr; /* 左侧接近2份，右侧略宽，接近1:1.8 */
+    grid-template-columns: 1.3fr 1fr;
     gap: 20px;
-    align-items: center; /* 垂直居中 */
-    width: 90%; /* PC和iPad端宽度为80% */
+    align-items: center;
+    width: 90%;
     height: 100%;
   }
 
   .left_column {
-    grid-column: 1 / 2; /* 左侧整列 */
+    grid-column: 1 / 2;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 垂直居中 */
+    justify-content: center;
     align-items: flex-start;
   }
 
   .content {
-    grid-column: 2 / 3; /* 右侧整列 */
+    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 垂直居中 */
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
-    font-size: 1.2rem; /* 调整字体大小 */
-    overflow: hidden; /* 防止溢出 */
+    font-size: 1.2rem;
+    overflow: hidden;
     gap: 10px;
   }
 }
 
-/* 调整后的 title_image 样式 */
 .title_image img {
-  width: 9rem; /* 调整图片大小为9rem */
+  width: 9rem;
   object-fit: cover;
 }
 
 .btn_section {
   display: flex;
-  justify-content: space-between; /* 左右对齐 */
-  align-items: center; /* 垂直居中 */
+  justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
 .btn img {
-  width: 100%; /* 宽度100%，根据父元素变化 */
-  /* max-width: 15rem; 设置图片的最大宽度 */
+  width: 100%;
   transition: transform 0.3s ease;
 }
 
@@ -188,7 +182,6 @@ export default defineComponent({
   transform: scale(0.98);
 }
 
-/* 原有的 title_section 样式 */
 .title_section {
   display: flex;
   justify-content: center;
@@ -211,12 +204,11 @@ export default defineComponent({
   color: #38bdf8;
 }
 
-/* content 区域的样式 */
 .content_item {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1000px; /* 调整最大宽度，确保内容区域更宽 */
+  max-width: 1000px;
 }
 
 .content_title {
@@ -237,8 +229,8 @@ export default defineComponent({
   flex-grow: 1;
   text-align: left;
   line-height: 3rem;
-  white-space: normal; /* 允许换行，确保内容完整显示 */
-  overflow: visible; /* 确保内容不被隐藏 */
+  white-space: normal;
+  overflow: visible;
 }
 
 .footer_bottom {

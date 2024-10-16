@@ -4,11 +4,7 @@
       <li v-for="(i, index) in list" :key="index">
         <div class="item-container">
           <div class="image">
-            <img
-              :src="i.image"
-              @click="openModal(i.image, index)"
-              class="thumbnail"
-            />
+            <img :src="i.image" @click="openModal(i.image)" class="thumbnail" />
           </div>
           <div class="content">
             <div class="btn" v-if="i?.btn" @click="DiscountsDetails(i, index)">
@@ -61,8 +57,7 @@ export default {
             window.innerWidth <= 768
               ? `未定事件簿ブースで、商品を3,000円(税込)<br/>お買い上げごとに、特典ホログラムチケット<br/>（全4種）
             をランダムで1枚プレゼント！`
-              : `未定事件簿ブースで、商品を3,000円(税込) お買い上げごとに、特典ホログラムチケット（全4種）
-            をランダムで1枚プレゼント！`,
+              : `未定事件簿ブースで、商品を3,000円(税込) お買い上げごとに、特典ホログラムチケット（全4種）をランダムで1セットプレゼント！`,
 
           annotation: [
             '【素材】  紙',
@@ -79,7 +74,7 @@ export default {
           intro:
             window.innerWidth <= 768
               ? '未定事件簿ブースで、グッズをご購入の方に<br/>ショッパーを1枚プレゼント。'
-              : '未定事件簿ブースで、グッズをご購入の方に ショッパーを1枚プレゼント。',
+              : '未定事件簿ブースで、グッズをご購入の方にショッパーを1枚プレゼント。',
           annotation: [
             '【素材】  紙',
             '【サイズ】70cm*43cm*10cm',
@@ -89,16 +84,14 @@ export default {
           ]
         }
       ],
-      isModalVisible: false, // 控制模态框显示
-      currentImage: '' // 当前点击的图片路径
+      isModalVisible: false,
+      currentImage: ''
     }
   },
   methods: {
-    openModal(image, index) {
-      if (index == 0) {
-        this.currentImage = image
-        this.isModalVisible = true
-      }
+    openModal(image) {
+      this.currentImage = image
+      this.isModalVisible = true
     },
     closeModal() {
       this.isModalVisible = false
@@ -109,13 +102,13 @@ export default {
 
 <style scoped>
 .thumbnail {
-  width: 100px; /* 缩略图大小可以根据需要调整 */
+  width: 100px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .thumbnail:hover {
-  opacity: 0.7; /* 鼠标悬停时透明度变化 */
+  opacity: 0.7;
 }
 
 .modal-image {
@@ -123,7 +116,6 @@ export default {
   height: auto;
 }
 
-/* 默认情况下，移动端样式保持不变 */
 .item-container {
   display: block;
   text-align: center;
@@ -135,60 +127,56 @@ export default {
   object-fit: cover;
 }
 
-/* PC端和iPad端样式优化 */
 @media screen and (min-width: 768px) {
   .item-container {
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    align-items: center;
     text-align: left;
-    gap: 2rem; /* 图片和内容之间的间距 */
+    gap: 2rem;
   }
 
-  /* 针对第二个li交换content和image的位置 */
   li:nth-child(2) .item-container {
-    flex-direction: row-reverse; /* 交换图片和内容的位置 */
+    flex-direction: row-reverse;
   }
 
   .image {
     flex: 1;
-    max-width: 40%; /* 图片宽度 */
+    max-width: 40%;
   }
 
   .image img {
     width: 100%;
-    height: auto; /* 保持图片比例 */
+    height: auto;
   }
 
   .content {
-    flex: 1.5; /* 右侧内容宽度 */
+    flex: 1.5;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 右侧内容垂直居中 */
-    align-items: flex-start; /* 确保内容左对齐 */
+    justify-content: center;
+    align-items: flex-start;
     text-align: left;
   }
 
-  /* 优化btn样式 */
   .btn {
-    background-color: transparent; /* 去掉背景色 */
-    color: #333; /* 字体颜色加深 */
-    font-size: 1.8rem; /* 调整字体大小 */
-    font-weight: bold; /* 字体加粗，类似标题效果 */
-    padding: 0; /* 去掉按钮内的额外填充 */
+    background-color: transparent;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0;
     cursor: pointer;
-    margin-top: 0; /* 去掉顶部间距 */
+    margin-top: 0;
     width: 100%;
     text-align: center;
   }
 
   .btn:hover {
-    background-color: transparent; /* 去掉hover时的背景色 */
-    color: #555; /* hover时字体颜色变化 */
+    background-color: transparent;
+    color: #555;
   }
 }
 
-/* 其他样式保持不变 */
 .name {
   font-size: 1.5rem;
   font-weight: bold;

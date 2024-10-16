@@ -31,12 +31,11 @@ export default {
     },
     contentBackground: {
       type: String,
-      default: 'none' // Content 的背景类型，默认为无背景
+      default: 'none'
     }
   },
   computed: {
     defaultStyle() {
-      // const maxWidth = window.innerWidth < 768 ? '90%' : '80%' // 小于768px为移动端
       return {
         background: 'linear-gradient(180deg, #e7e6e6 0%, #d5d4d4 100%)',
         padding: '2rem',
@@ -48,7 +47,7 @@ export default {
       }
     },
     contentStyle() {
-      return this.type === 'notice' ? { marginTop: '1.5rem' } : {} // 如果 type 为 notice，给 Content 添加 margin-top 样式
+      return this.type === 'notice' ? { marginTop: '1.5rem' } : {}
     }
   }
 }

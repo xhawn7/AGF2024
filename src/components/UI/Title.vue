@@ -12,9 +12,9 @@ export default {
     },
     type: {
       type: String,
-      default: 'default', // 默认是default样式
+      default: 'default',
       validator(value) {
-        return ['default', 'sub-title', 'notice'].includes(value) // 只允许default、sub-title、notice三种类型
+        return ['default', 'sub-title', 'notice'].includes(value)
       }
     }
   }

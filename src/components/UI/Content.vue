@@ -1,7 +1,6 @@
 <template>
   <div :class="['content', contentBackground]">
     <slot />
-    <!-- 插槽用于插入自定义内容 -->
   </div>
 </template>
 
@@ -11,22 +10,21 @@ export default {
   props: {
     backgroundType: {
       type: String,
-      default: 'none', // 默认无背景
+      default: 'none',
       validator(value) {
-        return ['none', 'white', 'striped'].includes(value) // 仅允许3种背景类型
+        return ['none', 'white', 'striped'].includes(value)
       }
     }
   },
   computed: {
     contentBackground() {
-      // 根据传入的backgroundType选择不同的样式
       switch (this.backgroundType) {
         case 'white':
           return 'white-background'
         case 'striped':
           return 'striped-background'
         default:
-          return 'no-background' // 默认无背景
+          return 'no-background'
       }
     }
   }
@@ -45,7 +43,6 @@ export default {
 }
 
 .white-background {
-  /* margin-top: 1.5rem; */
   padding: 2rem;
   background: #ffffff;
   color: #333;
