@@ -17,7 +17,7 @@
           <div class="image">
             <img :src="i.image" />
           </div>
-          <div class="name">{{ i.name }}</div>
+          <div class="name" v-html="i.name"></div>
           <div class="price">{{ i.price }}</div>
         </li>
       </swiper-slide>
@@ -62,7 +62,7 @@ export default defineComponent({
       list: [
         {
           image: image3,
-          name: 'グリッターアクリルキーホルダー 4種',
+          name: 'グリッター<br/>アクリルキーホルダー 4種',
           price: '各1,320円(税込)',
           matter: ['【素材】<br>アクリル樹脂、オイル ※グリッター仕様'],
           size: ['【サイズ】<br>約55*113mm'],

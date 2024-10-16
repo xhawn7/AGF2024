@@ -16,9 +16,13 @@
             </div>
             <div class="name" v-if="i?.name">{{ i.name }}</div>
             <div class="line"></div>
-            <div class="intro">{{ i.intro }}</div>
+            <div class="intro" v-html="i.intro"></div>
             <div class="tearsOfThemis_annotation2" v-if="i?.annotation">
-              <span v-for="(it, ind) in i.annotation" :key="ind">{{ it }}</span>
+              <span
+                v-for="(it, ind) in i.annotation"
+                :key="ind"
+                v-html="it"
+              ></span>
             </div>
           </div>
         </div>
@@ -53,13 +57,19 @@ export default {
           image: image2,
           btn: '購入特典①',
           name: 'ホログラムチケット 全4種',
-          intro: `未定事件簿ブースで、商品を3,000円(税込)お買い上げごとに、特典ホログラムチケット（全4種）
+          intro:
+            window.innerWidth <= 768
+              ? `未定事件簿ブースで、商品を3,000円(税込)<br/>お買い上げごとに、特典ホログラムチケット<br/>（全4種）
+            をランダムで1枚プレゼント！`
+              : `未定事件簿ブースで、商品を3,000円(税込) お買い上げごとに、特典ホログラムチケット（全4種）
             をランダムで1枚プレゼント！`,
 
           annotation: [
             '【素材】  紙',
             '【サイズ】210*70mm',
-            '※掲載画像はイメージです。実際の商品と多少異なる場合があります。'
+            window.innerWidth <= 768
+              ? '※掲載画像はイメージです。<br/>実際の商品と多少異なる場合があります。'
+              : '※掲載画像はイメージです 実際の商品と多少異なる場合があります。'
           ]
         },
         {
@@ -67,11 +77,15 @@ export default {
           btn: '購入特典②',
           name: '',
           intro:
-            '未定事件簿ブースで、グッズをご購入の方にショッパーを1枚プレゼント。',
+            window.innerWidth <= 768
+              ? '未定事件簿ブースで、グッズをご購入の方に<br/>ショッパーを1枚プレゼント。'
+              : '未定事件簿ブースで、グッズをご購入の方に ショッパーを1枚プレゼント。',
           annotation: [
             '【素材】  紙',
             '【サイズ】70cm*43cm*10cm',
-            '※掲載画像はイメージです。実際の商品と多少異なる場合があります。'
+            window.innerWidth <= 768
+              ? '※掲載画像はイメージです。<br/>実際の商品と多少異なる場合があります。'
+              : '※掲載画像はイメージです 実際の商品と多少異なる場合があります。'
           ]
         }
       ],

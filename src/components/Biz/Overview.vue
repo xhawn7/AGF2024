@@ -3,7 +3,7 @@
     <ul class="info-list">
       <li v-for="i in list" :key="i.title" class="info-item">
         <div class="name">{{ i.title }}</div>
-        <div class="intro">{{ i.intro }}</div>
+        <div class="intro" v-html="i.intro"></div>
       </li>
     </ul>
   </Container>
@@ -38,7 +38,9 @@ export default {
         {
           title: '会場',
           intro:
-            '池袋・サンシャインシティ White AREA：文化会館3階　展示ホールC Wー15'
+            window.innerWidth <= 768
+              ? `池袋・サンシャインシティ<br/>White AREA：文化会館3階<br/>展示ホールC Wー15`
+              : `池袋・サンシャインシティ White AREA：文化会館3階 展示ホールC Wー15`
         }
       ]
     }
@@ -47,6 +49,17 @@ export default {
 </script>
 
 <style scoped>
+/* PC 端隐藏 <br/> 标签 */
+.intro br {
+  display: none !important;
+}
+
+/* 移动端显示 <br/> 标签 */
+@media screen and (max-width: 768px) {
+  .intro br {
+    display: inline !important;
+  }
+}
 /* 优化样式 */
 .info-list {
   list-style: none;
