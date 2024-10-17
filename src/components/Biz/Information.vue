@@ -42,7 +42,6 @@ import image12 from '@/assets/commodity/item1-2.jpg'
 import image13 from '@/assets/commodity/item1-3.jpg'
 import image14 from '@/assets/commodity/item1-4.jpg'
 import image15 from '@/assets/commodity/item1-5.jpg'
-import image2 from '@/assets/commodity/item2.jpg'
 import image21 from '@/assets/commodity/item1-1.jpg'
 import image22 from '@/assets/commodity/item1-2.jpg'
 import image23 from '@/assets/commodity/item1-3.jpg'
@@ -229,7 +228,6 @@ export default defineComponent({
             }
           ]
         },
-
         {
           image: image4,
           name: 'ホログラム色紙',
