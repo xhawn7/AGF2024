@@ -40,7 +40,7 @@ export default {
           intro:
             window.innerWidth <= 768
               ? `池袋・サンシャインシティ<br/>White AREA：文化会館3階<br/>展示ホールC Wー15`
-              : `池袋・サンシャインシティブースWhite AREA：文化会館3階　展示ホールC W-15`
+              : `池袋・サンシャインシティ<br/>ブース<br/>White AREA：文化会館3階　展示ホールC W-15`
         }
       ]
     }
