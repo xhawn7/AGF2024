@@ -364,7 +364,6 @@ li:hover {
   margin-top: 1rem;
   color: #333;
   text-align: center;
-  line-height: 1.5rem;
 }
 
 .price {

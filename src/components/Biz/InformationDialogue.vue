@@ -148,7 +148,6 @@ export default defineComponent({
             width: 100%;
             .name {
               font-size: 24px;
-              line-height: 24px;
               font-family: YuGothM;
               font-weight: bold;
               color: #fff;
@@ -234,7 +233,6 @@ export default defineComponent({
             .right {
               .name {
                 font-size: 1.5rem;
-                line-height: 1.5rem;
                 padding-bottom: 1.25rem;
                 border-bottom-width: 0.0625rem;
               }
@@ -304,7 +302,6 @@ export default defineComponent({
             .right {
               .name {
                 font-size: 1.75rem;
-                line-height: 1.75rem;
                 margin-top: 2.5rem;
               }
               .price {
