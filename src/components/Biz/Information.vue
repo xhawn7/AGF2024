@@ -97,7 +97,7 @@ export default defineComponent({
           children: [
             {
               image: image11,
-              name: '【ランダム】トレーディング缶バッジ 第二弾 Raven 全5種',
+              name: '【ランダム】トレーディング缶バッジ 第二弾 各全5種',
               price: '1個 550円(税込)',
               matter: [
                 'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ'
@@ -110,7 +110,7 @@ export default defineComponent({
             },
             {
               image: image12,
-              name: '【ランダム】トレーディング缶バッジ 第二弾 LIBRA 全5種',
+              name: '【ランダム】トレーディング缶バッジ 第二弾 Raven 全5種',
               price: '1個 550円(税込)',
               matter: [
                 'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ'
@@ -123,7 +123,7 @@ export default defineComponent({
             },
             {
               image: image13,
-              name: '【ランダム】トレーディング缶バッジ 第二弾 ADJUDICATOR 全5種',
+              name: '【ランダム】トレーディング缶バッジ 第二弾 LIBRA 全5種',
               price: '1個 550円(税込)',
               matter: [
                 'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ'
@@ -136,7 +136,7 @@ export default defineComponent({
             },
             {
               image: image14,
-              name: '【ランダム】トレーディング缶バッジ 第二弾 KING 全5種',
+              name: '【ランダム】トレーディング缶バッジ 第二弾 ADJUDICATOR 全5種',
               price: '1個 550円(税込)',
               matter: [
                 'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ'
@@ -173,8 +173,8 @@ export default defineComponent({
           children: [
             {
               image: image11,
-              name: '【BOX】トレーディング缶バッジ 第二弾 Raven',
-              price: '1BOX（5個入）2,750(税込)',
+              name: '【BOX】トレーディング缶バッジ 第二弾 全4種',
+              // price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
               size: ['【サイズ】<br>約5cm*5cm'],
               type: ['【種類】<br>全5種'],
@@ -217,8 +217,8 @@ export default defineComponent({
             },
             {
               image: image15,
-              name: '【BOX】トレーディング缶バッジ 第二弾 KING',
-              price: '1BOX（5個入）2,750(税込)',
+              name: '【ランダム】トレーディング缶バッジ 第二弾 KING 全5種',
+              price: '1個 550円(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
               size: ['【サイズ】<br>約5cm*5cm'],
               type: ['【種類】<br>全5種'],
@@ -255,7 +255,7 @@ export default defineComponent({
           image: image7,
           name: 'ポケットポーチ',
           price: '各3,850円(税込)',
-          matter: ['【素材】<br>PU、シリコン'],
+          matter: ['【素材】<br>PU、天然ゴム'],
           size: ['【サイズ】<br>105*25*185mm 部品：約36*34*30mm'],
           type: ['【種類】<br>全4種'],
           hint: [

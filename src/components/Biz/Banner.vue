@@ -33,7 +33,7 @@ export default defineComponent({
 
 @media screen and (max-width: 750px) {
   .Banner {
-    height: 84rem;
+    height: 62rem;
     .banner_img {
       background-image: url('@/assets/banner_m.jpg');
       background-size: contain;
