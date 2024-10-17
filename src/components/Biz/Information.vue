@@ -41,6 +41,7 @@ import image11 from '@/assets/commodity/item1-1.jpg'
 import image12 from '@/assets/commodity/item1-2.jpg'
 import image13 from '@/assets/commodity/item1-3.jpg'
 import image14 from '@/assets/commodity/item1-4.jpg'
+import image15 from '@/assets/commodity/item1-5.jpg'
 import image2 from '@/assets/commodity/item2.jpg'
 import image21 from '@/assets/commodity/item1-1.jpg'
 import image22 from '@/assets/commodity/item1-2.jpg'
@@ -62,7 +63,7 @@ export default defineComponent({
       list: [
         {
           image: image3,
-          name: 'グリッター<br/>アクリルキーホルダー 4種',
+          name: 'グリッターアクリルキーホルダー 4種',
           price: '各1,320円(税込)',
           matter: ['【素材】<br>アクリル樹脂、オイル ※グリッター仕様'],
           size: ['【サイズ】<br>約55*113mm'],
@@ -146,11 +147,22 @@ export default defineComponent({
               hint: [
                 '※キャラを選んでご購入いただけます。<br>※1キャラにつき5個ご購入した場合でも、全種類が揃わない場合があります。予めご了承ください。<br>ブラインドパッケージのランダム封入となります、絵柄はお選びいただけません。<br>※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
               ]
+            },
+            {
+              image: image15,
+              name: '【BOX】トレーディング缶バッジ 第二弾 KING',
+              price: '1BOX（5個入）2,750(税込)',
+              matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
+              size: ['【サイズ】<br>約5cm*5cm'],
+              type: ['【種類】<br>全5種'],
+              hint: [
+                '全4種（1BOX 5パック入り）<br>※BOX販売商品になります。<br>※1BOXで全種類が揃わない場合もあります。予めご了承ください。<br>※1BOX5個入り。ブラインドパッケージのランダム封入となります、絵柄はお選びいただけません。<br>※掲載画像はイメージ。実際の商品と多少異なる場合がございます。'
+              ]
             }
           ]
         },
         {
-          image: image2,
+          image: image1,
           name: '【BOX】トレーディング缶バッジ 第二弾 4種',
           price: '1BOX（5個入） 2,750円（税込）',
           matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
@@ -161,7 +173,7 @@ export default defineComponent({
           ],
           children: [
             {
-              image: image21,
+              image: image11,
               name: '【BOX】トレーディング缶バッジ 第二弾 Raven',
               price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
@@ -172,7 +184,7 @@ export default defineComponent({
               ]
             },
             {
-              image: image22,
+              image: image12,
               name: '【BOX】トレーディング缶バッジ 第二弾 Raven',
               price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
@@ -183,7 +195,7 @@ export default defineComponent({
               ]
             },
             {
-              image: image23,
+              image: image13,
               name: '【BOX】トレーディング缶バッジ 第二弾 LIBRA',
               price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
@@ -194,7 +206,7 @@ export default defineComponent({
               ]
             },
             {
-              image: image24,
+              image: image14,
               name: '【BOX】トレーディング缶バッジ 第二弾 ADJUDICATOR',
               price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
@@ -205,7 +217,7 @@ export default defineComponent({
               ]
             },
             {
-              image: image24,
+              image: image15,
               name: '【BOX】トレーディング缶バッジ 第二弾 KING',
               price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
@@ -244,7 +256,7 @@ export default defineComponent({
         {
           image: image7,
           name: 'ポケットポーチ',
-          price: '各3,500円(税込)',
+          price: '各3,850円(税込)',
           matter: ['【素材】<br>PU、シリコン'],
           size: ['【サイズ】<br>105*25*185mm 部品：約36*34*30mm'],
           type: ['【種類】<br>全4種'],
