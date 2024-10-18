@@ -62,7 +62,7 @@ export default defineComponent({
       list: [
         {
           image: image3,
-          name: 'グリッターアクリルキーホルダー 4種',
+          name: 'グリッターアクリル<br/>キーホルダー 4種',
           price: '各1,320円(税込)',
           matter: ['【素材】<br>アクリル樹脂、オイル ※グリッター仕様'],
           size: ['【サイズ】<br>約55*113mm'],
@@ -84,7 +84,7 @@ export default defineComponent({
         },
         {
           image: image1,
-          name: '【ランダム】トレーディング缶バッジ 第二弾 各全5種',
+          name: '【ランダム】トレーディング<br/>缶バッジ 第二弾 各全5種',
           price: '1個 550円(税込)',
           matter: [
             'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ、紙、PP ※箔押し仕様'
@@ -163,7 +163,7 @@ export default defineComponent({
         },
         {
           image: image1,
-          name: '【BOX】トレーディング缶バッジ 第二弾 4種',
+          name: '【BOX】トレーディング<br/>缶バッジ 第二弾 4種',
           price: '1BOX（5個入） 2,750円（税込）',
           matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
           size: ['【サイズ】<br>約5cm*5cm'],
@@ -220,7 +220,7 @@ export default defineComponent({
             {
               image: image15,
               name: '【BOX】トレーディング缶バッジ 第二弾 KING',
-              price: '1個 550円(税込)',
+              price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
               size: ['【サイズ】<br>約5cm*5cm'],
               type: ['【種類】<br>全5種'],
@@ -326,6 +326,10 @@ export default defineComponent({
 :deep(.swiper-button-next:hover),
 :deep(.swiper-button-prev:hover) {
   background-color: #222;
+}
+
+:deep(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+  bottom: 0px;
 }
 li {
   background: #fff;

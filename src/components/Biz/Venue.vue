@@ -2,7 +2,7 @@
   <Container contentBackground="white" titleText="会場特典" id="venue">
     <div class="title">AGF2024来場記念ポストカード</div>
     <div class="content">
-      未定事件簿ブースお越しいただくポストカード1枚プレゼント。
+      未定事件簿ブースお越しいただく<br />ポストカード1枚プレゼント。
       <p>*数に限りございますので、なくなり次第終了となります。</p>
       <div class="image_btm">
         <img src="@/assets/special/bottom.jpg" />

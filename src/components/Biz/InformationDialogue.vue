@@ -274,7 +274,7 @@ export default defineComponent({
       .ant-modal {
         width: calc(100% - 6.25rem) !important;
         .ant-modal-content {
-          height: calc(100vh - 8.375rem);
+          height: calc(100vh - 12rem);
           .ant-modal-body {
             height: 100%;
             flex-direction: column;
