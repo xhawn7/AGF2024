@@ -1,11 +1,6 @@
 <template>
   <div class="anchor-menu">
-    <button
-      @click="toggleMenu"
-      class="menu-button"
-      :class="{ 'hidden-menu': isHidden }"
-      :style="menuStyle"
-    >
+    <button @click="toggleMenu" class="menu-button" :style="menuStyle">
       ☰
     </button>
     <a-drawer
@@ -105,13 +100,6 @@ export default {
   right: 10px;
   z-index: 1000;
   opacity: 1;
-
-  transition: all 1s ease;
-}
-
-.hidden-menu {
-  opacity: 0;
-
   transition: all 1s ease;
 }
 

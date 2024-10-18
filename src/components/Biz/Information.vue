@@ -3,7 +3,7 @@
     <swiper
       :slides-per-view="slidesPerView"
       space-between="20"
-      pagination
+      :pagination="{ el: '.custom-pagination' }"
       :breakpoints="breakpoints"
       :modules="modules"
       navigation
@@ -21,7 +21,9 @@
           <div class="price">{{ i.price }}</div>
         </li>
       </swiper-slide>
+      <div class="custom-pagination"></div>
     </swiper>
+
     <information-dialog
       v-if="visibleOpen"
       :open="visibleOpen"
@@ -42,10 +44,6 @@ import image12 from '@/assets/commodity/item1-2.jpg'
 import image13 from '@/assets/commodity/item1-3.jpg'
 import image14 from '@/assets/commodity/item1-4.jpg'
 import image15 from '@/assets/commodity/item1-5.jpg'
-import image21 from '@/assets/commodity/item1-1.jpg'
-import image22 from '@/assets/commodity/item1-2.jpg'
-import image23 from '@/assets/commodity/item1-3.jpg'
-import image24 from '@/assets/commodity/item1-4.jpg'
 import image3 from '@/assets/commodity/item3.jpg'
 import image4 from '@/assets/commodity/item4.jpg'
 import image5 from '@/assets/commodity/item5.jpg'
@@ -305,7 +303,6 @@ export default defineComponent({
 })
 </script>
 <style scoped>
-/* 使用 ::v-deep 选择器定制 Swiper 的 navigation 样式 */
 :deep(.swiper-button-next),
 :deep(.swiper-button-prev) {
   color: #fff;
@@ -328,9 +325,15 @@ export default defineComponent({
   background-color: #222;
 }
 
-:deep(.swiper-pagination-bullets.swiper-pagination-horizontal) {
-  bottom: 0px;
+/* :deep(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+  bottom: 60px !important;
+  left: 50% !important;
+} */
+
+.custom-pagination {
+  bottom: 0 !important;
 }
+
 li {
   background: #fff;
   border-radius: 0.5rem;
