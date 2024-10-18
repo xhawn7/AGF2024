@@ -325,13 +325,12 @@ export default defineComponent({
   background-color: #222;
 }
 
-/* :deep(.swiper-pagination-bullets.swiper-pagination-horizontal) {
-  bottom: 60px !important;
-  left: 50% !important;
-} */
-
 .custom-pagination {
   bottom: 0 !important;
+}
+
+.content {
+  background-color: pink !important;
 }
 
 li {
