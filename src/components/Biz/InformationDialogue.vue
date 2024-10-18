@@ -23,7 +23,7 @@
         </ul>
       </div>
       <div class="right">
-        <div class="name">{{ list[activeKey].name }}</div>
+        <div class="title-name" v-html="list[activeKey].name"></div>
         <div class="price">{{ list[activeKey].price }}</div>
 
         <p
@@ -87,6 +87,10 @@ export default defineComponent({
 </script>
 
 <style lang="less">
+.title-name br {
+  display: none;
+}
+
 .row {
   display: flex;
 }
@@ -146,7 +150,7 @@ export default defineComponent({
           }
           .right {
             width: 100%;
-            .name {
+            .title-name {
               font-size: 24px;
               font-family: YuGothM;
               font-weight: bold;
@@ -231,7 +235,7 @@ export default defineComponent({
               }
             }
             .right {
-              .name {
+              .title-name {
                 font-size: 1.5rem;
                 padding-bottom: 1.25rem;
                 border-bottom-width: 0.0625rem;
@@ -300,7 +304,7 @@ export default defineComponent({
               }
             }
             .right {
-              .name {
+              .title-name {
                 font-size: 1.75rem;
                 margin-top: 2.5rem;
               }

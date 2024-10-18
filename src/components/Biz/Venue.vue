@@ -22,6 +22,16 @@ export default {
 </script>
 
 <style scoped>
+.content br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .content br {
+    display: inline;
+  }
+}
+
 .title {
   font-size: 2rem;
   color: #1d4ed8;

@@ -22,6 +22,16 @@ export default {
 </script>
 
 <style scoped>
+.title br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .title br {
+    display: inline;
+  }
+}
+
 .contain:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
