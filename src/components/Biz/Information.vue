@@ -108,7 +108,7 @@ export default defineComponent({
             },
             {
               image: image12,
-              name: '【ランダム】トレーディング缶バッジ 第二弾 Raven 全5種',
+              name: '【ランダム】トレーディング缶バッジ 第二弾 RAVEN 全5種',
               price: '1個 550円(税込)',
               matter: [
                 'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ、紙、PP ※箔押し仕様'
@@ -147,7 +147,7 @@ export default defineComponent({
             },
             {
               image: image15,
-              name: '【ランダム】トレーディング缶バッジ 第二弾 ADJUDICATOR 全5種',
+              name: '【ランダム】トレーディング缶バッジ 第二弾 KING 全5種',
               price: '1個 550円(税込)',
               matter: [
                 'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ、紙、PP ※箔押し仕様'
@@ -184,7 +184,7 @@ export default defineComponent({
             },
             {
               image: image12,
-              name: '【BOX】トレーディング缶バッジ 第二弾 Raven',
+              name: '【BOX】トレーディング缶バッジ 第二弾 RAVEN',
               price: '1BOX（5個入）2,750(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
               size: ['【サイズ】<br>43*70mm'],
