@@ -219,7 +219,7 @@ export default defineComponent({
             },
             {
               image: image15,
-              name: '【ランダム】トレーディング缶バッジ 第二弾 KING 全5種',
+              name: '【BOX】トレーディング缶バッジ 第二弾 KING',
               price: '1個 550円(税込)',
               matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
               size: ['【サイズ】<br>約5cm*5cm'],
