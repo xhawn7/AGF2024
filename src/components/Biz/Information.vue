@@ -82,8 +82,8 @@ export default defineComponent({
         },
         {
           image: image1,
-          name: '【ランダム】トレーディング<br/>缶バッジ 第二弾 各全5種',
-          price: '1個 550円(税込)',
+          // name: '【ランダム】トレーディング<br/>缶バッジ 第二弾 各全5種',
+          // price: '1個 550円(税込)',
           matter: [
             'キャラクター毎に全5絵柄ランダムに封入。<br><br><br>【素材】<br>ブリキ、紙、PP ※箔押し仕様'
           ],
@@ -162,8 +162,8 @@ export default defineComponent({
         },
         {
           image: image1,
-          name: '【BOX】トレーディング<br/>缶バッジ 第二弾 全4種',
-          price: '1BOX（5個入） 2,750円（税込）',
+          // name: '【BOX】トレーディング<br/>缶バッジ 第二弾 全4種',
+          // price: '1BOX（5個入） 2,750円（税込）',
           matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
           size: ['【サイズ】<br>約5cm*5cm'],
           type: ['【種類】<br>全5種'],
@@ -230,8 +230,8 @@ export default defineComponent({
         },
         {
           image: image4,
-          name: 'ホログラム色紙',
-          price: '各1,100円(税込)',
+          // name: 'ホログラム色紙',
+          // price: '各1,100円(税込)',
           matter: ['【素材】<br>PET、紙'],
           size: ['【サイズ】<br>120*205mm'],
           type: ['【種類】<br>全4種'],
@@ -242,8 +242,8 @@ export default defineComponent({
 
         {
           image: image6,
-          name: 'クラブ会員カード',
-          price: '各440円(税込)',
+          // name: 'クラブ会員カード',
+          // price: '各440円(税込)',
           matter: ['【素材】<br>PVC'],
           size: ['【サイズ】<br>85.5*54mm'],
           type: ['【種類】<br>全4種'],
@@ -253,8 +253,8 @@ export default defineComponent({
         },
         {
           image: image7,
-          name: 'ポケットポーチ',
-          price: '各3,850円(税込)',
+          // name: 'ポケットポーチ',
+          // price: '各3,850円(税込)',
           matter: ['【素材】<br>PU、天然ゴム'],
           size: ['【サイズ】<br>105*25*185mm 部品：約36*34*30mm'],
           type: ['【種類】<br>全4種'],
@@ -284,8 +284,10 @@ export default defineComponent({
     const currList: any = ref([])
 
     const CommodityDetails = (i: any, index: number) => {
-      visibleOpen.value = true
-      currList.value = i.children ? i.children : [i]
+      if (index in [0, 1]) {
+        visibleOpen.value = true
+        currList.value = i.children ? i.children : [i]
+      }
     }
 
     const request = (val: any) => {
