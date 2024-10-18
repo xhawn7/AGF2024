@@ -164,7 +164,7 @@ export default defineComponent({
         },
         {
           image: image1,
-          name: '【BOX】トレーディング<br/>缶バッジ 第二弾 4種',
+          name: '【BOX】トレーディング<br/>缶バッジ 第二弾 全4種',
           price: '1BOX（5個入） 2,750円（税込）',
           matter: ['【素材】<br>ブリキ、紙、PP ※箔押し仕様'],
           size: ['【サイズ】<br>約5cm*5cm'],
